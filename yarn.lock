@@ -3924,7 +3924,7 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/number-is-nan/download/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt@^1.0.0:
+nuxt@^1.3.0:
   version "1.3.0"
   resolved "http://registry.npm.taobao.org/nuxt/download/nuxt-1.3.0.tgz#a862818aa39e8a8c2b60ede73cba4ff8628f1a5d"
   dependencies:
