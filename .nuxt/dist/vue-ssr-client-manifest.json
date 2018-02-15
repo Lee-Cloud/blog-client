@@ -3,26 +3,26 @@
   "all": [
     "vendor.b8f2fb9552b41d2d7833.js",
     "img/background-code2.d66f4d1.png",
-    "img/avatar.54e79f0.jpg",
+    "img/avatar.283cc26.jpg",
     "pages/post/_id.d5c2bf023ed1f7af3560.js",
     "pages/index.2ae6d72f09ac4e7f0c2a.js",
-    "layouts/default.2e1268a36940a9276645.js",
+    "layouts/default.4d77c2a3274a002da0ca.js",
     "img/appreciation.54cad52.jpg",
     "app.4c89dd0d9dd6245e625a.js",
-    "manifest.8637ef221902ab59cb17.js",
+    "manifest.f8e3108f873f7db5b6fb.js",
     "LICENSES",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.8637ef221902ab59cb17.js",
+    "manifest.f8e3108f873f7db5b6fb.js",
     "vendor.b8f2fb9552b41d2d7833.js",
     "app.4c89dd0d9dd6245e625a.js"
   ],
   "async": [
     "pages/post/_id.d5c2bf023ed1f7af3560.js",
     "pages/index.2ae6d72f09ac4e7f0c2a.js",
-    "layouts/default.2e1268a36940a9276645.js"
+    "layouts/default.4d77c2a3274a002da0ca.js"
   ],
   "modules": {
     "11722524": [
