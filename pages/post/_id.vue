@@ -3,6 +3,7 @@
         <h1 class="title">{{data.title}}</h1>
         <p class="createTime">{{data.create_time | timeFormat}}</p>
         <div  v-html="post" class="markdown-body" v-highlight></div>
+        <appreciation></appreciation>
     </div>
 </template>
 
@@ -10,6 +11,7 @@
 import marked from "marked";
 import moment from "moment";
 import Vue from "vue";
+import appreciation from "~/components/appreciation.vue";
 export default {
     validate ({ params }) {
         // Must be a number
@@ -47,6 +49,9 @@ export default {
             if (!time) return "";
             return moment(time).format("DD,MMMM,YYYY");
         }
+    },
+    components: {
+        appreciation
     }
 };
 </script>
