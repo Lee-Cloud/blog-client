@@ -1,3 +1,5 @@
+const resolve = require('path').resolve;
+
 module.exports = {
   /*
   ** Headers of the page
@@ -30,6 +32,15 @@ module.exports = {
   /*
   ** Build configuration
   */
+  router: {
+    extendRoutes (routes) {
+      routes.push({
+        name: 'post',
+        path: '/post/:id/:slug',
+        component: resolve(__dirname, 'pages/post/_id.vue')
+      })
+    }
+  },
   build: {
     /*
     ** Run ESLint on save

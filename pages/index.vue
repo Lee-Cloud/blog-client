@@ -3,7 +3,7 @@
         <cl-line title="CODING"></cl-line>
         <ul class="posts-list">
             <li v-for="post in codings" :key="post.id">
-                <nuxt-link class="title" :to="`/post/${post.id}`">{{post.title}}</nuxt-link>
+                <nuxt-link class="title" :to="`/post/${post.id}/${post.slug}`">{{post.title}}</nuxt-link>
                 <span class="createTime">{{post.create_time | timeFormat}}</span>
             </li>
         </ul>
@@ -11,7 +11,7 @@
         <cl-line title="SHARING"></cl-line>
         <ul class="posts-list">
             <li v-for="post in sharings" :key="post.id">
-                <nuxt-link class="title" :to="`/post/${post.id}`">{{post.title}}</nuxt-link>
+                <nuxt-link class="title" :to="`/post/${post.id}/${post.slug}`">{{post.title}}</nuxt-link>
                 <span class="createTime">{{post.create_time | timeFormat}}</span>
             </li>
         </ul>
@@ -39,10 +39,17 @@
 import Vue from "vue";
 import moment from "moment";
 import clLine from "~/components/line.vue";
+import pinyin from "pinyin";
 export default {
     async asyncData (ctx) {
         const codings = await Vue.http.get(`${Vue.api.POST}?classify=coding`);
         const sharings = await Vue.http.get(`${Vue.api.POST}?classify=sharing`);
+        codings.data.forEach(item => {
+            item.slug = pinyin(item.title, { style: pinyin.STYLE_NORMAL }).join("-");
+        });
+        sharings.data.forEach(item => {
+            item.slug = pinyin(item.title, { style: pinyin.STYLE_NORMAL }).join("-");
+        });
         return {
             codings: codings.data,
             sharings: sharings.data

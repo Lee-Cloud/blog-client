@@ -5,25 +5,25 @@
     "img/background-code2.d66f4d1.png",
     "img/avatar.283cc26.jpg",
     "pages/post/_id.3e0a0fc2f52ffd283234.js",
-    "pages/index.2ae6d72f09ac4e7f0c2a.js",
+    "pages/index.643c78399e3912368001.js",
     "layouts/default.4d77c2a3274a002da0ca.js",
     "img/appreciation.54cad52.jpg",
     "vendor.4359c298f0662ea624a1.js",
-    "app.2f9049e17dfa9aa49214.js",
-    "manifest.4558757686195ad73d46.js",
+    "app.fc04e266128906129cb4.js",
+    "manifest.b28173526c0bf6b4fcf9.js",
     "LICENSES",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.4558757686195ad73d46.js",
+    "manifest.b28173526c0bf6b4fcf9.js",
     "vendor.4359c298f0662ea624a1.js",
-    "app.2f9049e17dfa9aa49214.js"
+    "app.fc04e266128906129cb4.js"
   ],
   "async": [
     "layouts/fullpage.5ffb806653fed1a4d25e.js",
     "pages/post/_id.3e0a0fc2f52ffd283234.js",
-    "pages/index.2ae6d72f09ac4e7f0c2a.js",
+    "pages/index.643c78399e3912368001.js",
     "layouts/default.4d77c2a3274a002da0ca.js"
   ],
   "modules": {
@@ -277,6 +277,9 @@
     ],
     "35bd27df": [
       7
+    ],
+    "67a3c885": [
+      4
     ],
     "f628bec2": [
       8
@@ -653,6 +656,9 @@
     "033c75c5": [
       7
     ],
+    "b6047768": [
+      4
+    ],
     "65286ce4": [
       7
     ],
@@ -919,11 +925,17 @@
     "4c57fd76": [
       7
     ],
+    "1f19b3d7": [
+      4
+    ],
     "87c6b8fc": [
       7
     ],
     "25b5d185": [
       7
+    ],
+    "090d6d58": [
+      4
     ],
     "b539d9f6": [
       7
@@ -1016,6 +1028,9 @@
     ],
     "346f09ad": [
       7
+    ],
+    "278c4bda": [
+      4
     ],
     "3203df0e": [
       5,
@@ -1161,9 +1176,6 @@
     "7347ce1e": [
       7
     ],
-    "629e580d": [
-      7
-    ],
     "b1f394ea": [
       7
     ],
@@ -1271,6 +1283,9 @@
     "0adf14a1": [
       3,
       6
+    ],
+    "629e580d": [
+      7
     ],
     "6840d114": [
       7

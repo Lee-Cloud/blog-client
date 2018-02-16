@@ -8,6 +8,12 @@
 
 //! momentjs.com
 
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
 //! moment.js
 
 //! version : 2.20.1

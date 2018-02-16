@@ -62,6 +62,11 @@ export function createRouter () {
 			path: "/",
 			component: _96236df0,
 			name: "index"
+		},
+		{
+			path: "/post/:id/:slug",
+			component: _523ad985,
+			name: "post"
 		}
     ],
     
