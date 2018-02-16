@@ -10,7 +10,9 @@ import '../assets/highlight-style/solarized-light.css'
 
 let layouts = {
 
-  "_default": () => import('../layouts/default.vue'  /* webpackChunkName: "layouts/default" */).then(m => m.default || m)
+  "_default": () => import('../layouts/default.vue'  /* webpackChunkName: "layouts/default" */).then(m => m.default || m),
+
+  "_fullpage": () => import('../layouts/fullpage.vue'  /* webpackChunkName: "layouts/fullpage" */).then(m => m.default || m)
 
 }
 

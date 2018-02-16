@@ -20,9 +20,13 @@ export default {
     asyncData ({ params, error }) {
         return Vue.http.get(`${Vue.api.POST}/${params.id}`)
             .then(res => {
-                return {
-                    data: res.data
-                };
+                if (res.success) {
+                    return {
+                        data: res.data
+                    };
+                } else {
+                    error({ statusCode: 404, message: "该文章不存在或已被删除" });
+                }
             });
     },
     data () {
