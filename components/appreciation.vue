@@ -26,6 +26,7 @@ export default {
         }
         > img {
             width: 320px;
+            max-width: 70%;
         }
     }
 </style>
