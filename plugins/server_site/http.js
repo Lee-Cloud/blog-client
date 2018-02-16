@@ -15,9 +15,6 @@ http.interceptors.response.use(response => {
     switch (response.status) {
         case 200:
             return response.data;
-        case 401:
-            alert("无权限");
-            break;
         default:
             return response;
     }
