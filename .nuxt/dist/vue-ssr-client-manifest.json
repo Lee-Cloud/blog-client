@@ -9,16 +9,16 @@
     "layouts/default.4d77c2a3274a002da0ca.js",
     "img/appreciation.54cad52.jpg",
     "vendor.4359c298f0662ea624a1.js",
-    "app.745211031d0e3d38874c.js",
-    "manifest.292d00124939d8f77ad2.js",
+    "app.d9fb7435aa9c6eeca614.js",
+    "manifest.eadae954437d4be9e3ce.js",
     "LICENSES",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.292d00124939d8f77ad2.js",
+    "manifest.eadae954437d4be9e3ce.js",
     "vendor.4359c298f0662ea624a1.js",
-    "app.745211031d0e3d38874c.js"
+    "app.d9fb7435aa9c6eeca614.js"
   ],
   "async": [
     "layouts/fullpage.5ffb806653fed1a4d25e.js",
@@ -456,6 +456,9 @@
     ],
     "0acd5b18": [
       7
+    ],
+    "32fe1cd9": [
+      8
     ],
     "da3d6a86": [
       7
@@ -1176,6 +1179,9 @@
     "7347ce1e": [
       7
     ],
+    "629e580d": [
+      7
+    ],
     "b1f394ea": [
       7
     ],
@@ -1283,9 +1289,6 @@
     "0adf14a1": [
       3,
       6
-    ],
-    "629e580d": [
-      7
     ],
     "6840d114": [
       7
