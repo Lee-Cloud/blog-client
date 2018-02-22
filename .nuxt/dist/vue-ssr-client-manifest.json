@@ -4,25 +4,25 @@
     "layouts/fullpage.5ffb806653fed1a4d25e.js",
     "img/background-code2.d66f4d1.png",
     "img/avatar.283cc26.jpg",
-    "pages/post/_id.1bfd50c2d3e61d48ef0c.js",
+    "pages/post/_id.bc3f7cb439f937c1128f.js",
     "pages/index.643c78399e3912368001.js",
     "layouts/default.4d77c2a3274a002da0ca.js",
     "img/appreciation.54cad52.jpg",
     "vendor.4359c298f0662ea624a1.js",
-    "app.d9fb7435aa9c6eeca614.js",
-    "manifest.eadae954437d4be9e3ce.js",
+    "app.4c053f4c68987b4e21ee.js",
+    "manifest.9ec18f5a888c7b3841ab.js",
     "LICENSES",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.eadae954437d4be9e3ce.js",
+    "manifest.9ec18f5a888c7b3841ab.js",
     "vendor.4359c298f0662ea624a1.js",
-    "app.d9fb7435aa9c6eeca614.js"
+    "app.4c053f4c68987b4e21ee.js"
   ],
   "async": [
     "layouts/fullpage.5ffb806653fed1a4d25e.js",
-    "pages/post/_id.1bfd50c2d3e61d48ef0c.js",
+    "pages/post/_id.bc3f7cb439f937c1128f.js",
     "pages/index.643c78399e3912368001.js",
     "layouts/default.4d77c2a3274a002da0ca.js"
   ],

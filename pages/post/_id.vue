@@ -2,6 +2,9 @@
     <div class="post-page">
         <h1 class="title">{{data.title}}</h1>
         <p class="createTime">{{data.create_time | timeFormat}}</p>
+        <p class="count">
+            <i class="iconfont icon-view"></i> {{data.hits}}
+        </p>
         <div  v-html="post" class="markdown-body" v-highlight></div>
         <appreciation></appreciation>
     </div>
@@ -27,6 +30,8 @@ export default {
                 } else {
                     error({ statusCode: 404, message: "该文章不存在或已被删除" });
                 }
+            }).catch(err => {
+                error({ statusCode: 500, message: "出错啦" });
             });
     },
     data () {
@@ -67,6 +72,10 @@ export default {
             margin-bottom: 10px;
         }
         > .createTime {
+            margin-bottom: 6px;
+            color: gray;
+        }
+        > .count {
             margin-bottom: 30px;
             color: gray;
         }
