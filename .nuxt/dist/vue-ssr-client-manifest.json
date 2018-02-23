@@ -4,25 +4,25 @@
     "layouts/fullpage.5ffb806653fed1a4d25e.js",
     "img/background-code2.d66f4d1.png",
     "img/avatar.283cc26.jpg",
-    "pages/post/_id.bc3f7cb439f937c1128f.js",
+    "pages/post/_id.931ca4ccc9048e56ebd4.js",
     "pages/index.643c78399e3912368001.js",
     "layouts/default.4d77c2a3274a002da0ca.js",
     "img/appreciation.54cad52.jpg",
-    "vendor.4359c298f0662ea624a1.js",
-    "app.4c053f4c68987b4e21ee.js",
-    "manifest.9ec18f5a888c7b3841ab.js",
+    "vendor.65fbd1d7af729ec13ccb.js",
+    "app.3dea203e578839abd365.js",
+    "manifest.3b0b26a9a008a009679b.js",
     "LICENSES",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.9ec18f5a888c7b3841ab.js",
-    "vendor.4359c298f0662ea624a1.js",
-    "app.4c053f4c68987b4e21ee.js"
+    "manifest.3b0b26a9a008a009679b.js",
+    "vendor.65fbd1d7af729ec13ccb.js",
+    "app.3dea203e578839abd365.js"
   ],
   "async": [
     "layouts/fullpage.5ffb806653fed1a4d25e.js",
-    "pages/post/_id.bc3f7cb439f937c1128f.js",
+    "pages/post/_id.931ca4ccc9048e56ebd4.js",
     "pages/index.643c78399e3912368001.js",
     "layouts/default.4d77c2a3274a002da0ca.js"
   ],
@@ -584,6 +584,9 @@
     "231df6c4": [
       7
     ],
+    "d30f4a44": [
+      8
+    ],
     "7a0157f0": [
       8
     ],
@@ -1087,6 +1090,9 @@
     "08cfe562": [
       7
     ],
+    "627b6078": [
+      7
+    ],
     "406db46e": [
       7
     ],
@@ -1179,6 +1185,9 @@
     "7347ce1e": [
       7
     ],
+    "0aaa06c8": [
+      7
+    ],
     "629e580d": [
       7
     ],
@@ -1227,10 +1236,10 @@
     "eee108a8": [
       7
     ],
-    "50c41954": [
-      7
+    "113a4477": [
+      8
     ],
-    "0aaa06c8": [
+    "50c41954": [
       7
     ],
     "6ab4c296": [

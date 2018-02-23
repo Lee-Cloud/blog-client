@@ -19,7 +19,7 @@ let layouts = {
 let resolvedLayouts = {}
 
 export default {
-  head: {"title":"Lewis1990@Amoy - A Front-end developer passionate about coding and sharing!","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Nuxt.js project"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"\u002F\u002Fat.alicdn.com\u002Ft\u002Ffont_569133_ajo6vy5vtr8dunmi.css"}],"style":[],"script":[]},
+  head: {"title":"Lewis1990@Amoy - A Front-end developer passionate about coding and sharing!","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Nuxt.js project"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"\u002F\u002Fat.alicdn.com\u002Ft\u002Ffont_569133_88ben6ak7kkb7qfr.css"}],"style":[],"script":[]},
   render(h, props) {
     const loadingEl = h('nuxt-loading', { ref: 'loading' })
     const layoutEl = h(this.layout || 'nuxt')

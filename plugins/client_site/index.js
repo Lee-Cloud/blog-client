@@ -1,6 +1,7 @@
 import Vue from "vue";
 import hljs from "highlight.js";
 import "./baidu_tongji.js";
+import "./getFP.js";
 const install = function (VueClass, opts = {}) {};
 Vue.use(install);
 

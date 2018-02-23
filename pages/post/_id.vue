@@ -3,7 +3,17 @@
         <h1 class="title">{{data.title}}</h1>
         <p class="createTime">{{data.create_time | timeFormat}}</p>
         <p class="count">
-            <i class="iconfont icon-view"></i> {{data.hits}}
+            <i class="iconfont icon-view"></i>
+            <!-- 阅读 -->
+            {{data.hits}}
+            &nbsp;&nbsp;
+            <i class="iconfont icon-like_fill"></i>
+            <!-- 喜欢 -->
+            {{data.likes || 0}}
+            &nbsp;&nbsp;
+            <i class="iconfont icon-interactive_fill"></i>
+            <!-- 评论 -->
+            {{data.comments || 0}}
         </p>
         <div  v-html="post" class="markdown-body" v-highlight></div>
         <appreciation></appreciation>
@@ -59,6 +69,11 @@ export default {
             return moment(time).format("DD,MMMM,YYYY");
         }
     },
+    mounted () {
+        setTimeout(() => {
+            console.log("guest", this.$store.state.guest);
+        }, 1000);
+    },
     components: {
         appreciation
     }
@@ -72,7 +87,7 @@ export default {
             margin-bottom: 10px;
         }
         > .createTime {
-            margin-bottom: 6px;
+            margin-bottom: 10px;
             color: gray;
         }
         > .count {
