@@ -29,7 +29,7 @@
                 <span style="color: #0C9DF2;">twitter：</span><a href="https://twitter.com/Lewiiiissss" target="_blank">@Lewiiiissss</a>
             </li>
             <li>
-                <span>Blog1.0：</span><a href="http://www.lee-cloud.xyz" target="_blank">Cloud's Blog</a>
+                <span>Mail：</span><a href="mailto:lewis1990@hotmail.com">lewis1990@hotmail.com</a>
             </li>
         </ul>
     </div>

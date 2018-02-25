@@ -5,19 +5,23 @@ Vue.use(Vuex);
 
 const store = () => new Vuex.Store({
     state: {
-        guest: {
-            fp: "",
-            likes: []
+        isLogined: false,
+        userInfo: {
+            name: ""
         }
     },
     mutations: {
-        identify_guest(state, payload) {
-            if (payload && payload.fp) {
-                state.guest.fp = payload.fp;
-            }
-            if (payload && payload.likes) {
-                state.guest.likes = payload.likes;
-            }
+        changeLoginState (state, isLogined) {
+            state.isLogined = isLogined;
+        },
+        updateUserInfo (state, userInfo) {
+            state.userInfo = userInfo;
+        }
+    },
+    actions: {
+        redirect () {
+            location.href = "https://api.weibo.com/oauth2/authorize?client_id=2623944265&response_type=code&redirect_uri=http://blog.lee-cloud.xyz/login";
+            localStorage.setItem("beforeRedirectUri", location.pathname);
         }
     }
 });
