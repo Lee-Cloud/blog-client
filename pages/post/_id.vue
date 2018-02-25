@@ -9,7 +9,7 @@
             &nbsp;&nbsp;
             <i class="iconfont icon-like_fill"></i>
             <!-- 喜欢 -->
-            {{data.likes || 0}}
+            {{likes || 0}}
             &nbsp;&nbsp;
             <i class="iconfont icon-interactive_fill"></i>
             <!-- 评论 -->
@@ -53,6 +53,12 @@ export default {
         // markdown文章内容转化为html
         post: function () {
             return marked(this.data.content);
+        },
+        likes: function () {
+            const likes = this.data.like_ids || "";
+            return likes.split(",").filter(item => {
+                return item;
+            }).length;
         }
     },
     head () {
