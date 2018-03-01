@@ -1,21 +1,12 @@
 <template>
-  <div class="layout-default">
-      <cl-header></cl-header>
+  <div class="layout-fullpage">
       <nuxt class="layout-main"/>
-      <cl-footer></cl-footer>
       <div class="layout-bg"></div>
   </div>
 </template>
 
 <script type="text/javascript">
-import clHeader from "~/components/layout/header.vue";
-import clFooter from "~/components/layout/footer.vue";
-export default {
-    components: {
-        clHeader,
-        clFooter
-    }
-};
+export default {};
 </script>
 
 <style lang="less">
@@ -25,7 +16,7 @@ export default {
     body,
     #__nuxt,
     #__layout,
-    .layout-default {
+    .layout-fullpage {
         height: 100%;
         .layout-main {
             min-height: calc(~"100% - " (@layout-header-height + @layout-footer-height));

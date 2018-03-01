@@ -26,6 +26,7 @@ import moment from "moment";
 import Vue from "vue";
 import appreciation from "~/components/appreciation.vue";
 export default {
+    layout: "blog",
     validate ({ params }) {
         // 校验文章id是否为数字
         return /^\d+$/.test(params.id);

@@ -20,7 +20,6 @@
 export default {
     name: "nuxt-error",
     props: ["error"],
-    layout: "fullpage",
     head () {
         return {
             title: this.message,

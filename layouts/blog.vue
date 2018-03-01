@@ -1,12 +1,21 @@
 <template>
   <div class="layout-default">
+      <cl-header></cl-header>
       <nuxt class="layout-main"/>
+      <cl-footer></cl-footer>
       <div class="layout-bg"></div>
   </div>
 </template>
 
 <script type="text/javascript">
-export default {};
+import clHeader from "~/components/layout/header.vue";
+import clFooter from "~/components/layout/footer.vue";
+export default {
+    components: {
+        clHeader,
+        clFooter
+    }
+};
 </script>
 
 <style lang="less">

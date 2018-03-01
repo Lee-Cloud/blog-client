@@ -24,6 +24,22 @@ object-assign
 
 //! momentjs.com
 
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+//! moment.js
+
+//! version : 2.20.1
+
+//! authors : Tim Wood, Iskren Chernev, Moment.js contributors
+
+//! license : MIT
+
+//! momentjs.com
+
 /*!
  * Vue.js v2.5.13
  * (c) 2014-2017 Evan You

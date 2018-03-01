@@ -5,5 +5,8 @@ export default {
     POST_LIKE: config.api + "/post_like",
     GUEST: config.api + "/guest",
     WEIBO_LOGIN: config.api + "/weibo_login",
-    WEIBO_TOKEN: config.api + "/weibo_token"
+    WEIBO_TOKEN: config.api + "/weibo_token",
+
+    // 页面请求
+    HOME_PAGE: config.api + "/home_page"
 };

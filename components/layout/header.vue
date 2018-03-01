@@ -7,6 +7,9 @@
             <nuxt-link to="/" tag="li">
                 <i class="iconfont icon-homepage" title="回到首页"></i>
             </nuxt-link>
+            <nuxt-link to="/post" tag="li">
+                <i class="iconfont icon-activity"></i>
+            </nuxt-link>
             <li>
                 <i class="iconfont icon-login" title="登录解锁更多姿势与我深入交流吧" @click="showLoginBox"></i>
             </li>
