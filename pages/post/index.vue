@@ -1,10 +1,17 @@
 <template>
-    <div class="home-page">
-        <cl-line title="ALL POSTS"></cl-line>
+    <div class="posts-page">
+        <cl-line title="ALL POSTS (19)"></cl-line>
+        <p class="sort">
+            <span>排序：</span>
+            <span :class="{ active: orderby === 'hits'}" @click="getPosts('', 'hits')">点击量</span>
+            <!-- <span :class="{ active: orderby === 'likes'}" @click="getPosts('', 'likes')">喜欢</span> -->
+            <span  :class="{ active: orderby === 'create_time'}" @click="getPosts('', 'create_time')">发布时间</span>
+        </p>
         <ul class="posts-list">
             <li v-for="post in posts" :key="post.id">
                 <nuxt-link class="title" :to="`/post/${post.id}/${post.slug}`">{{post.title}}</nuxt-link>
-                <span class="createTime">{{post.create_time | timeFormat}}</span>
+                <span class="createTime" v-show="orderby === 'create_time'">{{post.create_time | timeFormat}}</span>
+                <span class="createTime" v-show="orderby === 'hits'">（{{post.hits}}）</span>
             </li>
         </ul>
     </div>
@@ -33,6 +40,8 @@ export default {
             item.slug = pinyin(item.title, { style: pinyin.STYLE_NORMAL }).join("-");
         });
         return {
+            classify: classify,
+            orderby: orderby,
             posts: posts
         };
     },
@@ -44,7 +53,7 @@ export default {
             meta: [
                 {
                     name: "description",
-                    content: "Lewis1990@Amoys是本人全栈开发的个人博客，采用KOA2 + NUXT.js的服务端渲染方案"
+                    content: "Lewis1990@Amoy全部文章列表"
                 }
             ]
         };
@@ -56,7 +65,23 @@ export default {
             return `（${moment(time).format("MMMM YYYY")}）`;
         }
     },
-    methods: {},
+    methods: {
+        getPosts: async function (classify, orderby) {
+            this.classify = classify;
+            this.orderby = orderby;
+            try {
+                const res = await Vue.http.get(`${Vue.api.POST}?classify=${classify}&orderby=${orderby}`);
+                if (res.success) {
+                    res.data.forEach(item => {
+                        item.slug = pinyin(item.title, { style: pinyin.STYLE_NORMAL }).join("-");
+                    });
+                    this.posts = res.data;
+                }
+            } catch (e) {
+                console.log("获取失败:", e);
+            }
+        }
+    },
     components: {
         clLine
     }
@@ -64,8 +89,23 @@ export default {
 </script>
 
 <style lang="less" scoped>
-    .home-page {
-        padding: 0 10px;
+    .posts-page {
+        padding: 0 20px;
+
+        p.sort {
+            margin-bottom: 10px;
+            > span {
+                margin-right: 20px;
+                &:not(:first-child) {
+                    cursor: pointer;
+                    &.active {
+                        color: #111;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
         ul.posts-list {
             margin-bottom: 30px;
             padding: 0 10px;

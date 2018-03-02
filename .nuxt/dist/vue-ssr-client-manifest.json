@@ -5,27 +5,27 @@
     "img/background-code2.d66f4d1.png",
     "img/avatar.283cc26.jpg",
     "pages/post/_id.560ba70f418455b1d4b7.js",
-    "pages/post/index.f26ea27b927ceb4d11a4.js",
+    "pages/post/index.da9592727e22d94c9ef6.js",
     "pages/index.73f3785280cea5fc8a9f.js",
     "layouts/blog.93e5891bc47aaf9aaba6.js",
     "img/appreciation.54cad52.jpg",
     "layouts/default.e47ff7a82eeca53ee6a3.js",
     "vendor.575b1171786407453e9f.js",
     "app.c9b5cd7b2e37d927525e.js",
-    "manifest.52e37c675a5790c4475b.js",
+    "manifest.90ef57ec085613136dc2.js",
     "LICENSES",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.52e37c675a5790c4475b.js",
+    "manifest.90ef57ec085613136dc2.js",
     "vendor.575b1171786407453e9f.js",
     "app.c9b5cd7b2e37d927525e.js"
   ],
   "async": [
     "pages/login/index.9583c9d2a5c508f16d54.js",
     "pages/post/_id.560ba70f418455b1d4b7.js",
-    "pages/post/index.f26ea27b927ceb4d11a4.js",
+    "pages/post/index.da9592727e22d94c9ef6.js",
     "pages/index.73f3785280cea5fc8a9f.js",
     "layouts/blog.93e5891bc47aaf9aaba6.js",
     "layouts/default.e47ff7a82eeca53ee6a3.js"
