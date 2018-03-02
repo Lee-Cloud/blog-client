@@ -1,6 +1,6 @@
 <template>
     <div class="posts-page">
-        <cl-line title="ALL POSTS (19)"></cl-line>
+        <cl-line :title="'POSTS (' + posts.length + ')'"></cl-line>
         <p class="sort">
             <span>排序：</span>
             <span :class="{ active: orderby === 'hits'}" @click="getPosts('', 'hits')">点击量</span>

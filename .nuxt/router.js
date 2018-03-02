@@ -5,6 +5,7 @@ Vue.use(Router)
 
 const _4258f846 = () => import('../pages/post/index.vue' /* webpackChunkName: "pages/post/index" */).then(m => m.default || m)
 const _35229f62 = () => import('../pages/login/index.vue' /* webpackChunkName: "pages/login/index" */).then(m => m.default || m)
+const _2e39f686 = () => import('../pages/about/index.vue' /* webpackChunkName: "pages/about/index" */).then(m => m.default || m)
 const _523ad985 = () => import('../pages/post/_id.vue' /* webpackChunkName: "pages/post/_id" */).then(m => m.default || m)
 const _96236df0 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
@@ -64,6 +65,11 @@ export function createRouter () {
 			path: "/login",
 			component: _35229f62,
 			name: "login"
+		},
+		{
+			path: "/about",
+			component: _2e39f686,
+			name: "about"
 		},
 		{
 			path: "/post/:id",
