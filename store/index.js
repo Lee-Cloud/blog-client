@@ -8,11 +8,15 @@ const store = () => new Vuex.Store({
         isLogined: false,
         userInfo: {
             name: ""
-        }
+        },
+        loginBoxVisible: false
     },
     mutations: {
         changeLoginState (state, isLogined) {
             state.isLogined = isLogined;
+        },
+        changeLoginBoxVisible (state, visible) {
+            state.loginBoxVisible = visible;
         },
         updateUserInfo (state, userInfo) {
             state.userInfo = userInfo;

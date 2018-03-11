@@ -14,13 +14,13 @@
                 <i class="iconfont icon-people" title="关于我"></i>
             </nuxt-link>
             <li>
-                <i class="iconfont icon-login" title="登录解锁更多姿势与我深入交流吧" @click="showLoginBox"></i>
+                <i class="iconfont icon-login" title="登录解锁更多姿势与我深入交流吧" @click="$store.commit('changeLoginBoxVisible', true)"></i>
             </li>
         </ul>
 
         <!-- 登录弹窗 -->
         <transition name="fade">
-            <div class="mask" v-show="loginBoxVisible" @click.self="loginBoxVisible = false">
+            <div class="mask" v-show="$store.state.loginBoxVisible" @click.self="$store.commit('changeLoginBoxVisible', false)">
                 <div class="loginBox">
                     <p>登录解锁更多姿势与我深入交流吧</p>
                     <ul class="loginWay">
@@ -45,16 +45,11 @@
 export default {
     name: "clHeader",
     data () {
-        return {
-            loginBoxVisible: false
-        };
+        return {};
     },
     methods: {
         redirect: function () {
             this.$store.dispatch("redirect");
-        },
-        showLoginBox: function () {
-            this.loginBoxVisible = true;
         }
     }
 };

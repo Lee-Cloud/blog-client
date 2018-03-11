@@ -16,7 +16,12 @@
             {{data.comments || 0}}
         </p>
         <div  v-html="post" class="markdown-body" v-highlight></div>
-        <appreciation :postId="$route.params.id" :like_ids="data.like_ids || ''"></appreciation>
+        <!-- <appreciation :postId="$route.params.id" :like_ids="data.like_ids || ''"></appreciation> -->
+        <div class="comment-box">
+            <p class="total"><span>{{comments.length}}条评论</span></p>
+            <comment-box @comfirm="leaveMessage"></comment-box>
+            <comment-list :data="comments"></comment-list>
+        </div>
     </div>
 </template>
 
@@ -25,6 +30,8 @@ import marked from "marked";
 import moment from "moment";
 import Vue from "vue";
 import appreciation from "~/components/appreciation.vue";
+import commentBox from "~/components/comment-box.vue";
+import commentList from "~/components/comment-list.vue";
 export default {
     layout: "blog",
     validate ({ params }) {
@@ -48,7 +55,9 @@ export default {
     },
     fetch ({ store, params }) {},
     data () {
-        return {};
+        return {
+            comments: []
+        };
     },
     computed: {
         // markdown文章内容转化为html
@@ -80,9 +89,32 @@ export default {
         }
     },
     mounted () {},
-    methods: {},
+    methods: {
+        leaveMessage: function (val) {
+            const data = {
+                post_id: this.post.id,
+                ...val
+            };
+            this.$axios.post(this.$api.PUBLIC_COMMENTS, data).then(res => {
+                if (res.success) {
+                    this.getComments();
+                }
+            }).catch(err => {
+                console.error(err);
+            });
+        },
+        getComments: function () {
+            this.$axios.get(`${this.$api.PUBLIC_COMMENTS}/${this.post.id}`).then(res => {
+                if (res.success) {
+                    this.comments = res.data;
+                }
+            }).catch();
+        }
+    },
     components: {
-        appreciation
+        appreciation,
+        commentBox,
+        commentList
     }
 };
 </script>
@@ -100,6 +132,27 @@ export default {
         > .count {
             margin-bottom: 30px;
             color: gray;
+        }
+
+        .comment-box {
+            margin-top: 40px;
+            .total {
+                position: relative;
+                > span {
+                    position: relative;
+                    background-color: white;
+                    padding-right: 8px;
+                    z-index: 2;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: 100%;
+                    border-top: 1px solid #ccc;
+                }
+            }
         }
     }
 </style>
