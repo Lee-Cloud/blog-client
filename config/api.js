@@ -6,6 +6,8 @@ export default {
     GUEST: config.api + "/guest",
     WEIBO_LOGIN: config.api + "/weibo_login",
     WEIBO_TOKEN: config.api + "/weibo_token",
+    QQ_LOGIN: config.api + "/qq_login",
+    QQ_TOKEN: config.api + "/qq_token",
 
     // 页面请求
     HOME_PAGE: config.api + "/home_page"

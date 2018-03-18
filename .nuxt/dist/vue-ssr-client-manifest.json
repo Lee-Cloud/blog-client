@@ -1,7 +1,7 @@
 {
   "publicPath": "/_nuxt/",
   "all": [
-    "pages/login/qq.7c76d8f3f2d545e7778a.js",
+    "pages/login/qq.a19f90f4979f134bdcaf.js",
     "img/background-code2.d66f4d1.png",
     "img/avatar.283cc26.jpg",
     "img/avatar-default.bac5d36.png",
@@ -9,30 +9,30 @@
     "pages/post/_id.5e1adb2dba37f806339e.js",
     "pages/post/index.a35a5e37b33dd7de33e2.js",
     "pages/index.73f3785280cea5fc8a9f.js",
-    "layouts/blog.2f6de308192d089ee191.js",
+    "layouts/blog.8a2bf7beb3763bf9111b.js",
     "img/appreciation.54cad52.jpg",
-    "pages/login/index.1940d7cad3bb6326103b.js",
+    "pages/login/index.2512d9a8ffa69741a8d3.js",
     "layouts/default.15d162da29a7848155f2.js",
     "pages/about/index.e6aa5423a36b1aaf8ff1.js",
     "vendor.7eb5c332406ac434fe90.js",
-    "app.20f52ae6b141dc5f1663.js",
-    "manifest.8171644cffb92ac2a691.js",
+    "app.e20bf13acb3cc34f0942.js",
+    "manifest.caf25e532a69f9051918.js",
     "LICENSES",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.8171644cffb92ac2a691.js",
+    "manifest.caf25e532a69f9051918.js",
     "vendor.7eb5c332406ac434fe90.js",
-    "app.20f52ae6b141dc5f1663.js"
+    "app.e20bf13acb3cc34f0942.js"
   ],
   "async": [
-    "pages/login/qq.7c76d8f3f2d545e7778a.js",
+    "pages/login/qq.a19f90f4979f134bdcaf.js",
     "pages/post/_id.5e1adb2dba37f806339e.js",
     "pages/post/index.a35a5e37b33dd7de33e2.js",
     "pages/index.73f3785280cea5fc8a9f.js",
-    "layouts/blog.2f6de308192d089ee191.js",
-    "pages/login/index.1940d7cad3bb6326103b.js",
+    "layouts/blog.8a2bf7beb3763bf9111b.js",
+    "pages/login/index.2512d9a8ffa69741a8d3.js",
     "layouts/default.15d162da29a7848155f2.js",
     "pages/about/index.e6aa5423a36b1aaf8ff1.js"
   ],
@@ -359,6 +359,9 @@
     "ccb2ef08": [
       13
     ],
+    "7e2ab915": [
+      0
+    ],
     "1017843a": [
       13
     ],
@@ -366,6 +369,9 @@
       5,
       9,
       3
+    ],
+    "616ec32d": [
+      0
     ],
     "48f6318d": [
       13
@@ -826,6 +832,9 @@
     "3ede5014": [
       13
     ],
+    "114f1ba4": [
+      0
+    ],
     "a71e72c0": [
       13
     ],
@@ -1164,6 +1173,9 @@
     "0a5ed7d3": [
       13
     ],
+    "21570cae": [
+      0
+    ],
     "49e8e936": [
       13
     ],
@@ -1209,6 +1221,9 @@
     ],
     "69f2d86c": [
       13
+    ],
+    "4633246f": [
+      0
     ],
     "439477a2": [
       13
@@ -1418,9 +1433,6 @@
     "0da95930": [
       13
     ],
-    "629e580d": [
-      13
-    ],
     "0adf14a1": [
       5,
       9,
@@ -1432,6 +1444,9 @@
       3
     ],
     "6840d114": [
+      13
+    ],
+    "629e580d": [
       13
     ]
   }

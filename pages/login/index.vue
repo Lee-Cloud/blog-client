@@ -13,20 +13,6 @@ export default {
         // 检验微博登录code是否存在
         return query.code;
     },
-    // asyncData ({ query, error }) {
-    //     return Vue.http.get(`${Vue.api.WEIBO_TOKEN}?code=${query.code}`)
-    //         .then(res => {
-    //             if (res.success) {
-    //                 return {
-    //                     tokens: res.data
-    //                 };
-    //             } else {
-    //                 error({ statusCode: 403, message: res.message });
-    //             }
-    //         }).catch(err => {
-    //             error({ statusCode: 500, message: "请检查您的网络" });
-    //         });
-    // },
     data () {
         return {
             tokens: {},
@@ -54,13 +40,19 @@ export default {
                 access_token: this.tokens.access_token,
                 uid: this.tokens.uid
             }).then(res => {
-                this.$store.commit("updateUserInfo", res.data.userInfo);
-                this.$store.commit("changeLoginState", true);
-                localStorage.setItem("userInfo", JSON.stringify(res.data.userInfo));
-                const beforeRedirectUri = localStorage.beforeRedirectUri;
-                this.$router.replace(beforeRedirectUri);
+                if (res.success) {
+                    this.$store.commit("updateUserInfo", res.data.userInfo);
+                    this.$store.commit("changeLoginState", true);
+                    localStorage.setItem("userInfo", JSON.stringify(res.data.userInfo));
+                    const beforeRedirectUri = localStorage.beforeRedirectUri;
+                    this.$router.replace(beforeRedirectUri);
+                } else {
+                    this.$router.replace("/");
+                    alert("登录失败，不要问我为什么！");
+                }
             }).catch(err => {
-                console.log("登录失败");
+                this.$router.replace("/");
+                alert("登录失败，不要问我为什么！");
             });
         }
     },

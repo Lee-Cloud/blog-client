@@ -55,6 +55,8 @@ module.exports = {
         "vars-on-top": 2,//var必须放在作用域顶部
 
         // 永久关闭
+        "no-console": 0,
+        "no-alert": 0,
         "no-await-in-loop": 0,  // for循环中可以用await
         "jsx-a11y/anchor-is-valid": 0,
         "no-mixed-operators": 0, // 字符混用的检验要关闭

@@ -24,7 +24,8 @@
                 <div class="loginBox">
                     <p>登录解锁更多姿势与我深入交流吧</p>
                     <ul class="loginWay">
-                        <li class="iconfont icon-sina" style="color: rgb(225, 39, 39); fontSize: 20px;" @click="redirect"></li>
+                        <li class="iconfont icon-sina" style="color: rgb(225, 39, 39); fontSize: 20px;" @click="$store.dispatch('weiboLogin')"></li>
+                        <li class="iconfont icon-qq" style="color: rgb(76, 175, 233); fontSize: 20px;" @click="$store.dispatch('qqLogin')"></li>
                     </ul>
                 </div>
             </div>
@@ -32,11 +33,12 @@
 
         <!-- 登录用户名 -->
         <span class="loginName" v-if="$store.state.userInfo.name">
-            <i  class="iconfont icon-sina" style="color: rgb(225, 39, 39)"></i>
-            <a :href="'https://weibo.com/' + $store.state.userInfo.profile_url" target="_blank">{{$store.state.userInfo.name}}</a>
+            <img :src="$store.state.userInfo.avatar" alt="头像">
+            <!-- <i  class="iconfont icon-sina" style="color: rgb(225, 39, 39)"></i> -->
+            <span>{{$store.state.userInfo.name}}</span>
         </span>
 
-        <span class="loginName" v-else @click="redirect">微博登录</span>
+        <span class="loginName" v-else @click="$store.commit('changeLoginBoxVisible', true)" style="cursor: pointer;">登录</span>
 
     </header>
 </template>
@@ -47,11 +49,7 @@ export default {
     data () {
         return {};
     },
-    methods: {
-        redirect: function () {
-            this.$store.dispatch("redirect");
-        }
-    }
+    methods: {}
 };
 </script>
 
@@ -130,6 +128,7 @@ export default {
                 > li {
                     font-size: 30px;
                     cursor: pointer;
+                    margin: 0 10px;
                 }
             }
         }
@@ -139,11 +138,16 @@ export default {
         position: absolute;
         right: 20px;
         top: 10px;
-        cursor: pointer;
-        text-decoration: underline;
-        > a {
-            color: #555;
+        display: inline-flex;
+        align-items: center;
+
+        > img {
+            border-radius: 50%;
+            width: 20px;
+            margin-right: 6px;
         }
+        // cursor: pointer;
+        // text-decoration: underline;
     }
 
     .fade-enter-active, .fade-leave-active {

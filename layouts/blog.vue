@@ -11,6 +11,12 @@
 import clHeader from "~/components/layout/header.vue";
 import clFooter from "~/components/layout/footer.vue";
 export default {
+    data () {
+        return {};
+    },
+    mounted () {
+        this.$store.dispatch("initUser");
+    },
     components: {
         clHeader,
         clFooter

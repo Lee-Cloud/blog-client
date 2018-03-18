@@ -23,8 +23,18 @@ const store = () => new Vuex.Store({
         }
     },
     actions: {
-        redirect () {
+        initUser ({ state, commit }) {
+            const user = JSON.parse(localStorage.getItem("userInfo"));
+            if (user) {
+                state.userInfo = user;
+            }
+        },
+        weiboLogin () {
             location.href = "https://api.weibo.com/oauth2/authorize?client_id=2623944265&response_type=code&redirect_uri=http://blog.lee-cloud.xyz/login";
+            localStorage.setItem("beforeRedirectUri", location.pathname);
+        },
+        qqLogin () {
+            location.href = "https://graph.qq.com/oauth2.0/authorize?client_id=101459855&response_type=code&redirect_uri=http://blog.lee-cloud.xyz/login/qq&state=web";
             localStorage.setItem("beforeRedirectUri", location.pathname);
         }
     }
