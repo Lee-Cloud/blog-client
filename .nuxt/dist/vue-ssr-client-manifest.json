@@ -9,20 +9,20 @@
     "pages/post/_id.5e1adb2dba37f806339e.js",
     "pages/post/index.a35a5e37b33dd7de33e2.js",
     "pages/index.73f3785280cea5fc8a9f.js",
-    "layouts/blog.8a2bf7beb3763bf9111b.js",
+    "layouts/blog.72e251f95cfc73b50d78.js",
     "img/appreciation.54cad52.jpg",
     "pages/login/index.2512d9a8ffa69741a8d3.js",
     "layouts/default.15d162da29a7848155f2.js",
     "pages/about/index.e6aa5423a36b1aaf8ff1.js",
     "vendor.7eb5c332406ac434fe90.js",
     "app.e20bf13acb3cc34f0942.js",
-    "manifest.caf25e532a69f9051918.js",
+    "manifest.4e1cb279f3bf9fc6008d.js",
     "LICENSES",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.caf25e532a69f9051918.js",
+    "manifest.4e1cb279f3bf9fc6008d.js",
     "vendor.7eb5c332406ac434fe90.js",
     "app.e20bf13acb3cc34f0942.js"
   ],
@@ -31,7 +31,7 @@
     "pages/post/_id.5e1adb2dba37f806339e.js",
     "pages/post/index.a35a5e37b33dd7de33e2.js",
     "pages/index.73f3785280cea5fc8a9f.js",
-    "layouts/blog.8a2bf7beb3763bf9111b.js",
+    "layouts/blog.72e251f95cfc73b50d78.js",
     "pages/login/index.2512d9a8ffa69741a8d3.js",
     "layouts/default.15d162da29a7848155f2.js",
     "pages/about/index.e6aa5423a36b1aaf8ff1.js"

@@ -120,6 +120,7 @@ export default {
             // height: 200px;
             border-radius: 8px;
             background-color: white;
+            max-width: 90%;
 
             ul.loginWay {
                 display: inline-flex;
