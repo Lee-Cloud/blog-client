@@ -1,11 +1,12 @@
 <template lang="html">
     <div class="appreciation-wrap">
         <p>讨论请发邮件到 <a href="mailto:lewis1990@foxmail.com" class="link">lewis1990@foxmail.com</a> </p>
-        <p>
+        <!-- <p>
             <i class="iconfont" :class="{'icon-like_fill': isLiked || afterLikeIt, 'icon-like': !isLiked}" @click="likeIt"></i>
-        </p>
-        <p>喜欢的话点个赞咯</p>
-        <p>微信扫描赞赏码赞助此文</p>
+        </p> -->
+        <!-- <p>喜欢的话点个赞咯</p> -->
+        <!-- <p>微信扫描赞赏码赞助此文</p> -->
+        <p>或者，请我喝杯咖啡？</p>
         <img :src="require('~/assets/images/appreciation.jpg')" alt="">
     </div>
 </template>

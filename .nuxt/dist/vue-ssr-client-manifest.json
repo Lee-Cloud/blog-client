@@ -6,7 +6,7 @@
     "img/avatar.283cc26.jpg",
     "img/avatar-default.bac5d36.png",
     "img/WX_Q\u001cRcode.2d950d2.png",
-    "pages/post/_id.1684a094602cd1bc451d.js",
+    "pages/post/_id.0d29f5a936a05d1a0521.js",
     "pages/post/index.a35a5e37b33dd7de33e2.js",
     "pages/index.23f9342f7073537ddba6.js",
     "layouts/blog.72e251f95cfc73b50d78.js",
@@ -15,20 +15,20 @@
     "layouts/default.15d162da29a7848155f2.js",
     "pages/about/index.e6aa5423a36b1aaf8ff1.js",
     "vendor.7eb5c332406ac434fe90.js",
-    "app.4826398de2d23010d33b.js",
-    "manifest.0d4ac7f06c66d41ea6c4.js",
+    "app.0ceebedc307d4f1f41f8.js",
+    "manifest.3afa2621579639a2fde9.js",
     "LICENSES",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.0d4ac7f06c66d41ea6c4.js",
+    "manifest.3afa2621579639a2fde9.js",
     "vendor.7eb5c332406ac434fe90.js",
-    "app.4826398de2d23010d33b.js"
+    "app.0ceebedc307d4f1f41f8.js"
   ],
   "async": [
     "pages/login/qq.a19f90f4979f134bdcaf.js",
-    "pages/post/_id.1684a094602cd1bc451d.js",
+    "pages/post/_id.0d29f5a936a05d1a0521.js",
     "pages/post/index.a35a5e37b33dd7de33e2.js",
     "pages/index.23f9342f7073537ddba6.js",
     "layouts/blog.72e251f95cfc73b50d78.js",
