@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="wrapper">
         <!-- <img src="../assets/images/avatar.png" alt=""> -->
-        <img :src="$store.state.userInfo.profile_image_url || require('~/assets/images/avatar-default.png')" alt="头像" class="avatar" v-on:click="changeAvatar">
+        <img :src="$store.state.userInfo.avatar || require('~/assets/images/avatar-default.png')" alt="头像" class="avatar" v-on:click="changeAvatar">
         <div class="new-comment-main" @click="checkLoginState">
             <textarea v-model="comment.content" rows="3" maxlength="30" placeholder="leave me a message"></textarea>
             <span class="btn" v-on:click="comfirm">留言</span>

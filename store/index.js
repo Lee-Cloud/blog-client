@@ -27,6 +27,7 @@ const store = () => new Vuex.Store({
             const user = JSON.parse(localStorage.getItem("userInfo"));
             if (user) {
                 state.userInfo = user;
+                commit("changeLoginState", true);
             }
         },
         weiboLogin () {
