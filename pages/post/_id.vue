@@ -17,11 +17,11 @@
         </p>
         <div  v-html="post" class="markdown-body" v-highlight></div>
         <appreciation :postId="$route.params.id" :like_ids="data.like_ids || ''"></appreciation>
-        <div class="comment-box">
+        <!-- <div class="comment-box">
             <p class="total"><span>{{comments.length}}条评论</span></p>
             <comment-box @comfirm="leaveMessage"></comment-box>
             <comment-list :data="comments"></comment-list>
-        </div>
+        </div> -->
     </div>
 </template>
 
