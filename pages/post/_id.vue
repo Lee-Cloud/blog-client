@@ -38,20 +38,17 @@ export default {
         // 校验文章id是否为数字
         return /^\d+$/.test(params.id);
     },
-    asyncData ({ params, error }) {
+    async asyncData ({ params, error }) {
         // 获取文章详情
-        return Vue.http.get(`${Vue.api.POST}/${params.id}`)
-            .then(res => {
-                if (res.success) {
-                    return {
-                        data: res.data
-                    };
-                } else {
-                    error({ statusCode: 404, message: "该文章不存在或已被删除" });
-                }
-            }).catch(err => {
-                error({ statusCode: 500, message: "出错啦" });
-            });
+        let data = {};
+        try {
+            data = await Vue.http.get(`post/${params.id}`);
+            return {
+                data: data
+            };
+        } catch (e) {
+            error({ statusCode: 404, message: "出错啦" });
+        }
     },
     fetch ({ store, params }) {},
     data () {

@@ -3,12 +3,12 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _4258f846 = () => import('../pages/post/index.vue' /* webpackChunkName: "pages/post/index" */).then(m => m.default || m)
-const _2e39f686 = () => import('../pages/about/index.vue' /* webpackChunkName: "pages/about/index" */).then(m => m.default || m)
-const _35229f62 = () => import('../pages/login/index.vue' /* webpackChunkName: "pages/login/index" */).then(m => m.default || m)
-const _14af16c0 = () => import('../pages/login/qq.vue' /* webpackChunkName: "pages/login/qq" */).then(m => m.default || m)
-const _523ad985 = () => import('../pages/post/_id.vue' /* webpackChunkName: "pages/post/_id" */).then(m => m.default || m)
-const _96236df0 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
+const _0e76c865 = () => import('../pages/post/index.vue' /* webpackChunkName: "pages/post/index" */).then(m => m.default || m)
+const _1a017a04 = () => import('../pages/about/index.vue' /* webpackChunkName: "pages/about/index" */).then(m => m.default || m)
+const _0c30284c = () => import('../pages/login/index.vue' /* webpackChunkName: "pages/login/index" */).then(m => m.default || m)
+const _27e9dd48 = () => import('../pages/login/qq.vue' /* webpackChunkName: "pages/login/qq" */).then(m => m.default || m)
+const _6575a00d = () => import('../pages/post/_id.vue' /* webpackChunkName: "pages/post/_id" */).then(m => m.default || m)
+const _ce376100 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 
 
@@ -59,37 +59,37 @@ export function createRouter () {
     routes: [
 		{
 			path: "/post",
-			component: _4258f846,
+			component: _0e76c865,
 			name: "post"
 		},
 		{
 			path: "/about",
-			component: _2e39f686,
+			component: _1a017a04,
 			name: "about"
 		},
 		{
 			path: "/login",
-			component: _35229f62,
+			component: _0c30284c,
 			name: "login"
 		},
 		{
 			path: "/login/qq",
-			component: _14af16c0,
+			component: _27e9dd48,
 			name: "login-qq"
 		},
 		{
 			path: "/post/:id",
-			component: _523ad985,
+			component: _6575a00d,
 			name: "post-id"
 		},
 		{
 			path: "/",
-			component: _96236df0,
+			component: _ce376100,
 			name: "index"
 		},
 		{
 			path: "/post/:id/:slug",
-			component: _523ad985,
+			component: _6575a00d,
 			name: "post"
 		}
     ],

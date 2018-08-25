@@ -29,10 +29,8 @@ export default {
         const orderby = query.orderby || "hits";
         let posts = [];
         try {
-            const res = await Vue.http.get(`${Vue.api.POST}?classify=${classify}&orderby=${orderby}`);
-            if (res.success) {
-                posts = res.data;
-            }
+            const res = await Vue.http.get(`post?classify=${classify}&orderby=${orderby}&limit=999`);
+            posts = res.rows;
         } catch (e) {
             error({ statusCode: 500, message: "出错啦" });
         }
@@ -70,13 +68,11 @@ export default {
             this.classify = classify;
             this.orderby = orderby;
             try {
-                const res = await Vue.http.get(`${Vue.api.POST}?classify=${classify}&orderby=${orderby}`);
-                if (res.success) {
-                    res.data.forEach(item => {
-                        item.slug = pinyin(item.title, { style: pinyin.STYLE_NORMAL }).join("-");
-                    });
-                    this.posts = res.data;
-                }
+                const res = await Vue.http.get(`post?classify=${classify}&orderby=${orderby}&limit=999`);
+                res.rows.forEach(item => {
+                    item.slug = pinyin(item.title, { style: pinyin.STYLE_NORMAL }).join("-");
+                });
+                this.posts = res.rows;
             } catch (e) {
                 console.log("获取失败:", e);
             }

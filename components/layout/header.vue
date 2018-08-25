@@ -13,9 +13,9 @@
             <nuxt-link to="/about" tag="li">
                 <i class="iconfont icon-people" title="关于我"></i>
             </nuxt-link>
-            <li>
+            <!-- <li>
                 <i class="iconfont icon-login" title="登录解锁更多姿势与我深入交流吧" @click="$store.commit('changeLoginBoxVisible', true)"></i>
-            </li>
+            </li> -->
         </ul>
 
         <!-- 登录弹窗 -->
@@ -32,13 +32,13 @@
         </transition>
 
         <!-- 登录用户名 -->
-        <span class="loginName" v-if="$store.state.userInfo.name">
+        <!-- <span class="loginName" v-if="$store.state.userInfo.name">
             <img :src="$store.state.userInfo.avatar" alt="头像">
-            <!-- <i  class="iconfont icon-sina" style="color: rgb(225, 39, 39)"></i> -->
+            <i  class="iconfont icon-sina" style="color: rgb(225, 39, 39)"></i>
             <span>{{$store.state.userInfo.name}}</span>
         </span>
 
-        <span class="loginName" v-else @click="$store.commit('changeLoginBoxVisible', true)" style="cursor: pointer;">登录</span>
+        <span class="loginName" v-else @click="$store.commit('changeLoginBoxVisible', true)" style="cursor: pointer;">登录</span> -->
 
     </header>
 </template>

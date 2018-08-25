@@ -46,24 +46,23 @@ export default {
         let codings = [];
         let sharings = [];
         try {
-            const res = await Vue.http.get(Vue.api.HOME_PAGE);
-            if (res.success) {
-                codings = res.data.codings;
-                sharings = res.data.sharings;
-            }
+            const codingsData = await Vue.http.get("/post?classify=coding&limit=10");
+            const sharingsData = await Vue.http.get("/post?classify=sharing&limit=10");
+            codings = codingsData.rows;
+            sharings = sharingsData.rows;
+            codings.forEach(item => {
+                item.slug = pinyin(item.title, { style: pinyin.STYLE_NORMAL }).join("-");
+            });
+            sharings.forEach(item => {
+                item.slug = pinyin(item.title, { style: pinyin.STYLE_NORMAL }).join("-");
+            });
+            return {
+                codings: codings,
+                sharings: sharings
+            };
         } catch (e) {
             ctx.error({ statusCode: 500, message: "出错啦" });
         }
-        codings.forEach(item => {
-            item.slug = pinyin(item.title, { style: pinyin.STYLE_NORMAL }).join("-");
-        });
-        sharings.forEach(item => {
-            item.slug = pinyin(item.title, { style: pinyin.STYLE_NORMAL }).join("-");
-        });
-        return {
-            codings: codings,
-            sharings: sharings
-        };
     },
     data () {
         return {};
