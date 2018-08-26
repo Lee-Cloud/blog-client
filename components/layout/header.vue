@@ -10,9 +10,9 @@
             <nuxt-link to="/post" tag="li">
                 <i class="iconfont icon-activity" title="全部文章"></i>
             </nuxt-link>
-            <nuxt-link to="/about" tag="li">
+            <!-- <nuxt-link to="/about" tag="li">
                 <i class="iconfont icon-people" title="关于我"></i>
-            </nuxt-link>
+            </nuxt-link> -->
             <!-- <li>
                 <i class="iconfont icon-login" title="登录解锁更多姿势与我深入交流吧" @click="$store.commit('changeLoginBoxVisible', true)"></i>
             </li> -->

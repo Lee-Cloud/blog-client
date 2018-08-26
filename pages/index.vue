@@ -16,6 +16,14 @@
             </li>
         </ul>
 
+        <cl-line title="NOTES"></cl-line>
+        <ul class="posts-list">
+            <li v-for="post in notes" :key="post.id">
+                <nuxt-link class="title" :to="`/post/${post.id}/${post.slug}`">{{post.title}}</nuxt-link>
+                <span class="createTime">{{post.create_time | timeFormat}}</span>
+            </li>
+        </ul>
+
         <!-- 联系我 -->
         <cl-line title="LINKS"></cl-line>
         <ul class="links">
@@ -45,20 +53,27 @@ export default {
     async asyncData (ctx) {
         let codings = [];
         let sharings = [];
+        let notes = [];
         try {
             const codingsData = await Vue.http.get("/post?classify=coding&limit=10");
             const sharingsData = await Vue.http.get("/post?classify=sharing&limit=10");
+            const notesData = await Vue.http.get("/post?classify=note&limit=10");
             codings = codingsData.rows;
             sharings = sharingsData.rows;
+            notes = notesData.rows;
             codings.forEach(item => {
                 item.slug = pinyin(item.title, { style: pinyin.STYLE_NORMAL }).join("-");
             });
             sharings.forEach(item => {
                 item.slug = pinyin(item.title, { style: pinyin.STYLE_NORMAL }).join("-");
             });
+            notes.forEach(item => {
+                item.slug = pinyin(item.title, { style: pinyin.STYLE_NORMAL }).join("-");
+            });
             return {
                 codings: codings,
-                sharings: sharings
+                sharings: sharings,
+                notes: notes
             };
         } catch (e) {
             ctx.error({ statusCode: 500, message: "出错啦" });
@@ -104,7 +119,7 @@ export default {
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 .title {
-                    color: #555;
+                    color: #333;
                     cursor: pointer;
                     text-decoration: underline;
                 }

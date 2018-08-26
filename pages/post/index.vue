@@ -112,7 +112,7 @@ export default {
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 .title {
-                    color: #555;
+                    color: #333;
                     cursor: pointer;
                     text-decoration: underline;
                 }
