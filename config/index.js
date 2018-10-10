@@ -4,7 +4,7 @@ const config = {
         api: "http://blog-api.lee-cloud.xyz"
     },
     production: {
-        api: "http://blog-api.lee-cloud.xyz"
+        api: "https://blog-api.lee-cloud.xyz"
     }
 };
 module.exports = config[process.env.NODE_ENV];
