@@ -15,7 +15,7 @@ export default {
         return {};
     },
     mounted () {
-        this.$store.dispatch("initUser");
+        // this.$store.dispatch("initUser");
     },
     components: {
         clHeader,

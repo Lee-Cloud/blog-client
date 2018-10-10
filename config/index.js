@@ -1,7 +1,7 @@
 const config = {
     development: {
         // api: "http://127.0.0.1:7001"
-        api: "http://blog-api.lee-cloud.xyz"
+        api: "https://blog-api.lee-cloud.xyz"
     },
     production: {
         api: "https://blog-api.lee-cloud.xyz"
