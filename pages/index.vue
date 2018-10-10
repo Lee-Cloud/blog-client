@@ -37,6 +37,9 @@
                 <span style="color: #0C9DF2;">twitter：</span><a href="https://twitter.com/Lewiiiissss" target="_blank">@Lewiiiissss</a>
             </li>
             <li>
+                <span style="color: #12b918;">Wechat Public：</span><a href="javascript:;">touch me ~ touch me ~<img :src="require('~/assets/images/wechat_public_qrcode.jpg')" alt="公众号二维码"></a>
+            </li>
+            <li>
                 <span>Mail：</span><a href="mailto:lewis1990@foxmail.com">lewis1990@foxmail.com</a>
             </li>
         </ul>
@@ -138,8 +141,28 @@ export default {
                 > a {
                     color: #555;
                     text-decoration: underline;
+                    position: relative;
+                    img {
+                        position: absolute;
+                        opacity: 0;
+                        transition: all .3s;
+                        width: 150px;
+                        top: 50%;
+                        // right: 0;
+                        left: 100%;
+                        transform: translateY(-50%);
+                    }
+                }
+                &:hover img {
+                    opacity: 1;
                 }
             }
+        }
+    }
+    @media (max-width: 420px) {
+        ul.links li img {
+            left: auto!important;
+            right: 0!important;
         }
     }
 </style>
