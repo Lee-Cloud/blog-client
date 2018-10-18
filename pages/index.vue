@@ -90,7 +90,7 @@ export default {
             meta: [
                 {
                     name: "description",
-                    content: "Lewis1990@Amoys是本人全栈开发的个人博客，采用KOA2 + NUXT.js的服务端渲染方案"
+                    content: "Lewis1990@Amoys是本人全栈开发的个人博客，采用egg.js + NUXT.js的服务端渲染方案"
                 }
             ]
         };
