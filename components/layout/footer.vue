@@ -1,6 +1,6 @@
 <template lang="html">
     <footer>
-        <p>©2018 lee-cloud.com 闽ICP备17026635号-1</p>
+        <p>©2016-2018 lee-cloud.xyz 闽ICP备17026635号-1</p>
     </footer>
 </template>
 
