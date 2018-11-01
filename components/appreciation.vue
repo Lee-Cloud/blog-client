@@ -14,8 +14,13 @@
 
 <script>
 import clLine from "~/components/line.vue";
-import Valine from "valine";
-window.AV = require("leancloud-storage");
+// import Valine from "valine";
+// window.AV = require("leancloud-storage");
+let Valine = null;
+if (process.browser) {
+    Valine = require("valine");
+    window.AV = require("leancloud-storage");
+}
 export default {
     props: ["postId", "like_ids"],
     data() {
