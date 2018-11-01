@@ -16,7 +16,9 @@
             {{data.comments || 0}}
         </p>
         <div  v-html="post" class="markdown-body" v-highlight></div>
-        <appreciation :postId="$route.params.id" :like_ids="data.like_ids || ''"></appreciation>
+        <no-ssr>
+            <appreciation :postId="$route.params.id" :like_ids="data.like_ids || ''"></appreciation>
+        </no-ssr>
         <!-- <div class="comment-box">
             <p class="total"><span>{{comments.length}}条评论</span></p>
             <comment-box @comfirm="leaveMessage"></comment-box>
@@ -32,6 +34,7 @@ import Vue from "vue";
 import appreciation from "~/components/appreciation.vue";
 import commentBox from "~/components/comment-box.vue";
 import commentList from "~/components/comment-list.vue";
+import NoSSR from "vue-no-ssr";
 export default {
     layout: "blog",
     validate ({ params }) {
@@ -111,7 +114,8 @@ export default {
     components: {
         appreciation,
         commentBox,
-        commentList
+        commentList,
+        NoSSR
     }
 };
 </script>

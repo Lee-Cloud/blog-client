@@ -1,18 +1,21 @@
 <template lang="html">
     <div class="appreciation-wrap">
-        <p>讨论请发邮件到 <a href="mailto:lewis1990@foxmail.com" class="link">lewis1990@foxmail.com</a> </p>
+        <div id="vcomments"></div>
+        <!-- <p>讨论请发邮件到 <a href="mailto:lewis1990@foxmail.com" class="link">lewis1990@foxmail.com</a> </p> -->
         <!-- <p>
             <i class="iconfont" :class="{'icon-like_fill': isLiked || afterLikeIt, 'icon-like': !isLiked}" @click="likeIt"></i>
         </p> -->
         <!-- <p>喜欢的话点个赞咯</p> -->
         <!-- <p>微信扫描赞赏码赞助此文</p> -->
-        <p>或者，请我喝杯咖啡？</p>
-        <img :src="require('~/assets/images/appreciation.jpg')" alt="">
+        <!-- <p>或者，请我喝杯咖啡？</p>
+        <img :src="require('~/assets/images/appreciation.jpg')" alt=""> -->
     </div>
 </template>
 
 <script>
 import clLine from "~/components/line.vue";
+import Valine from "valine";
+window.AV = require("leancloud-storage");
 export default {
     props: ["postId", "like_ids"],
     data() {
@@ -33,6 +36,18 @@ export default {
                 }
             }
         }
+    },
+    mounted () {
+        this.valine = new Valine({
+            el: "#vcomments",
+            appId: "04lb0SPiJFWu4TjqCx86slgB-gzGzoHsz",
+            appKey: "GUjRjPdRrETsyP7LN8ly91ss",
+            path: this.postId,
+            placeholder: "写下你的评论..."
+            // avatar: ""
+            // notify: true
+            // verify: true
+        });
     },
     methods: {
         likeIt: function () {
@@ -87,7 +102,7 @@ export default {
         width: 100%;
         margin-top: 60px;
         padding: 40px 0;
-        text-align: center;
+        // text-align: center;
         border-top: 1px solid #ccc;
         > p {
             margin-bottom: 10px;
