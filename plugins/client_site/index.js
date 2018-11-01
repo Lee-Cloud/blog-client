@@ -1,7 +1,8 @@
 import Vue from "vue";
 import hljs from "highlight.js";
 import "./baidu_tongji.js";
-import "./clientInit.js";
+// import "./clientInit.js";
+// import "./valine.js";
 
 const install = function (VueClass, opts = {}) {};
 Vue.use(install);

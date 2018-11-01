@@ -26,8 +26,8 @@ module.exports = {
   ** Customize the progress bar color
   */
   plugins: [
-      { src: "~plugins/client_site/index.js", ssr: false},
-      { src: "~plugins/server_site/index.js", ssr: true}
+      { src: "~plugins/client_site/index.js", ssr: false },
+      { src: "~plugins/server_site/index.js", ssr: true }
   ],
   loading: { color: '#3B8070' },
   /*
@@ -43,6 +43,9 @@ module.exports = {
     }
   },
   build: {
+      externals: {
+          window: "window"
+      },
     /*
     ** Run ESLint on save
     */
@@ -54,6 +57,9 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+    }
+      externals: {
+          window: "window"
       }
     }
   }
