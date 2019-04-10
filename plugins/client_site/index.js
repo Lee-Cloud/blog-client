@@ -1,6 +1,7 @@
 import Vue from "vue";
 import hljs from "highlight.js";
 import "./baidu_tongji.js";
+import "./google_a.js";
 // import "./clientInit.js";
 // import "./valine.js";
 
@@ -16,3 +17,9 @@ Vue.directive("highlight", (el) => {
 
 import fastclick from "fastclick";
 fastclick.attach(document.body);
+
+let adsbygoogle;
+(adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1218928568415905",
+    enable_page_level_ads: true
+});
